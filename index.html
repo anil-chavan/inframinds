@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OpsEngineers | DevOps • MLOps • DataOps • AIOps • Cloud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ═══ NAVBAR ═════════════════════════════════ -->
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="OpsEngineers logo" class="logo-img" />
+      <span>OpsEngineers</span>
+    </a>
+    <nav id="navLinks" class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="#services">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="hamburger" class="hamburger"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- ═══ HERO ══════════════════════════════════ -->
+  <section class="hero home-hero center">
+    <div class="container">
+      <h1>Your Partner in <span class="accent">Ops Excellence</span></h1>
+      <p>DevOps, MLOps, DataOps, AIOps & Cloud Infrastructure Services ‑ engineered for velocity, resilience, and uncompromising quality.</p>
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES (clickable cards) ════════════ -->
+  <section id="services" class="services container">
+    <h2 class="section-title">Strategic Service Pillars</h2>
+    <div class="cards">
+      <article class="card" data-key="devops">
+        <h3>DevOps</h3>
+        <p>• Automation <br>• CI/CD<br> • GitOps • SRE</p>
+      </article>
+      <article class="card" data-key="mlops">
+        <h3>MLOps</h3>
+        <p>• Model pipelines <br>• Drift monitoring<br> • Continuous training</p>
+      </article>
+      <article class="card" data-key="dataops">
+        <h3>DataOps</h3>
+        <p>• Streaming ETL<br> • Data observability<br> • Governance</p>
+      </article>
+      <article class="card" data-key="aiops">
+        <h3>AIOps</h3>
+        <p>• Predictive alerting<br> • Self‑healing<br> • Intelligent runbooks</p>
+      </article>
+      <article class="card" data-key="cloud">
+        <h3>Cloud Infra</h3>
+        <p>• AWS | Azure | GCP<br> • Security‑trust<br> • Cost optimisation</p>
+      </article>
+      <article class="card" data-key="resume">
+        <h3>Resume Boost</h3>
+        <p>• ATS‑friendly<br> • Role‑focused<br> • Professional impact</p>
+      </article>
+      <article class="card" data-key="interview">
+        <h3>Interview Prep</h3>
+        <p>• Live coaching<br> • Domain‑specific questions<br> • Confidence build</p>
+      </article>
+      <article class="card" data-key="mock">
+        <h3>Mock Sessions + Notes</h3>
+        <p>• Simulated interviews<br> • Real‑time feedback<br> • Custom cheat sheets</p>
+      </article>
+      
+    </div>
+
+    <!-- dynamic details drop‑in -->
+    <div id="service-detail" class="service-detail hidden"></div>
+  </section>
+
+  
+  <!-- ═══ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    
+    © 2025 OpsEngineers • All rights reserved
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
