@@ -8,12 +8,15 @@
 </head>
 <body>
   <header class="navbar">
-    <a class="brand" href="index.html"><img src="images/logo.png" alt="logo" class="logo-img"><span>OpsEngineers</span></a>
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="logo" class="logo-img" />
+      <span>OpsEngineers</span>
+    </a>
     <nav id="navLinks" class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="index.html#services">Services</a>
-        <a href="contact.html" class="active">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
     <button id="hamburger" class="hamburger"><span></span><span></span><span></span></button>
   </header>
@@ -28,68 +31,70 @@
 
     <section class="contact-form-section">
       <form
-       action="https://formspree.io/f/mzzgykve"
-       method="POST"
-       class="contact-form"
+        id="contactForm"
+        action="https://formspree.io/f/mzzgykve"
+        method="POST"
+        class="contact-form"
       >
-    <!-- Name -->
-    <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-        minlength="2"
-        pattern="[A-Za-z\s]+"
-        title="Please enter a valid name"
-    />
+        <!-- Name -->
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          minlength="2"
+          pattern="[A-Za-z\s]+"
+          title="Please enter a valid name"
+        />
 
-    <!-- Email -->
-    <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
-        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-        title="Enter a valid email address"
-    />
+        <!-- Email -->
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Enter a valid email address"
+        />
 
-    <!-- Phone -->
-    <input
-        type="tel"
-        name="phone"
-        placeholder="Your Phone Number"
-        required
-        pattern="^\+?[0-9]{10,15}$"
-        title="Enter a valid phone number (10 digits, optional + country code)">
+        <!-- Phone -->
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Your Phone Number"
+          required
+          pattern="^\+?[0-9]{10,15}$"
+          title="Enter a valid phone number (10–15 digits, optional +country code)"
+        />
 
-    <!-- Service Dropdown -->
-    <select name="service" required>
-        <option value="">Select a Service</option>
-        <option>DevOps</option>
-        <option>MLOps</option>
-        <option>DataOps</option>
-        <option>AIOps</option>
-        <option>Cloud Infrastructure</option>
-        <option>Resume Optimization</option>
-        <option>Interview Preparation</option>
-        <option>Mock Interviews & Notes</option>
-    </select>
+        <!-- Service Dropdown -->
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option>DevOps</option>
+          <option>MLOps</option>
+          <option>DataOps</option>
+          <option>AIOps</option>
+          <option>Cloud Infrastructure</option>
+          <option>Resume Optimization</option>
+          <option>Interview Preparation</option>
+          <option>Mock Interviews & Notes</option>
+        </select>
 
-    <!-- Message -->
-    <textarea
-        name="message"
-        rows="5"
-        placeholder="Tell us about your requirement"
-        required
-        minlength="10"
-    ></textarea>
+        <!-- Message -->
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Tell us about your requirement"
+          required
+          minlength="10"
+        ></textarea>
 
-    <!-- Optional Hidden Fields
-    <input type="hidden" name="_subject" value="New Inquiry from OpsEngineers Website" />
-    <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html" /> -->
+        <!-- Status Message -->
+        <p id="formStatus"></p>
 
-    <button type="submit" class="btn btn-primary">Send Message</button>
-  </form>
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
     </section>
 
     <section class="center" style="margin-top: 2.5rem">
@@ -97,13 +102,15 @@
       <div class="social">
         <a href="https://www.linkedin.com/in/devops-support/" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/devops_mlops_cloud_infra" target="_blank">Instagram</a>
-        <!-- <a href="https://wa.me/91yourwhatsapp" target="_blank">WhatsApp</a> -->
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy;  2025 OpsEngineers • All rights reserved
-        <script src="js/main.js"></script>
-    </body>
-    </html>
+    <p>&copy; 2025 OpsEngineers • All rights reserved</p>
+  </footer>
+
+  <!-- JS script loaded here -->
+  <script src="js/main.js"></script>
+</body>
+</html>
