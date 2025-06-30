@@ -128,3 +128,20 @@ form?.addEventListener("submit", async (e) => {
   }
 });
 
+// Redirect to homepage on page reload
+if (performance.getEntriesByType("navigation")[0].type === "reload") {
+  // If current page is NOT home page, redirect
+  if (!location.pathname.endsWith("index.html")) {
+    window.location.href = "index.html";
+  }
+}
+// If the page is index.html and there's a hash (like #services), remove it on reload
+if (
+  performance.getEntriesByType("navigation")[0].type === "reload" &&
+  location.pathname.endsWith("index.html") &&
+  location.hash
+) {
+  // Replace the URL without hash and reload from top
+  history.replaceState(null, null, location.pathname);
+  window.scrollTo(0, 0);
+}
