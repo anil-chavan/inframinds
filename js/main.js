@@ -102,3 +102,29 @@ document.querySelectorAll(".card[data-key]").forEach(card=>{
   });
 });
 
+/* ─── Contact Form Submission ─── */
+const form = document.getElementById("contactForm");
+const status = document.getElementById("formStatus");
+
+form?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  status.textContent = "Sending...";
+
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    });
+
+    if (res.ok) {
+      status.textContent = "✅ Thanks! We’ll be in touch shortly.";
+      form.reset();
+    } else {
+      status.textContent = "⚠️ Something went wrong. Please try again.";
+    }
+  } catch (err) {
+    status.textContent = "⚠️ Network error. Please retry later.";
+  }
+});
+
